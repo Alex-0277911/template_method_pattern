@@ -1,0 +1,24 @@
+@startuml
+set namespaceSeparator ::
+
+abstract class "template_method_pattern::template_method_pattern.dart::GameLevel" {
+  +void start()
+  +void initialize()
+  +void end()
+  +void play()
+}
+
+class "template_method_pattern::template_method_pattern.dart::LevelOne" {
+  +void play()
+}
+
+"template_method_pattern::template_method_pattern.dart::GameLevel" <|-- "template_method_pattern::template_method_pattern.dart::LevelOne"
+
+class "template_method_pattern::template_method_pattern.dart::LevelTwo" {
+  +void play()
+}
+
+"template_method_pattern::template_method_pattern.dart::GameLevel" <|-- "template_method_pattern::template_method_pattern.dart::LevelTwo"
+
+
+@enduml
